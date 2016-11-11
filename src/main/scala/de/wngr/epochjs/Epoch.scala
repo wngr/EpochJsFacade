@@ -11,7 +11,7 @@ import js.JSConverters._
 trait EpochTimeLine extends JQuery {
   def epoch(options: ChartOptions): this.type = js.native
 
-  def push(data: js.Array[DataPoint]) = js.native
+  def push(data: js.Array[DataPoint]): js.Function0[Int] = js.native
 }
 object EpochTimeLine {
   implicit def jq2epoch(jq: JQuery): EpochTimeLine =
